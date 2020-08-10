@@ -1,0 +1,22 @@
+<resources>
+<string name="app_name">Address Book</string>
+    <string name="add_contact">Add New Contact</string>
+
+    <string name="no_data">No Contacts Available\nPlease click + to add new contact</string>
+    <string name="add_contact_heading">Add Contact Name</string>
+    <string name="error_message_firstName">Please enter a valid first name</string>
+
+    <string name="error_message_lastName">Please enter a valid last name</string>
+
+    <string name="error_message_phoneNumber">Please enter a valid phone number</string>
+    <string name="error_message_email">Please enter a valid email</string>
+    <string name="error_message_address">Please enter a valid address</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_phone_number">Phone Number</string>
+    <string name="hint_e_mail_address">e-mail Address</string>
+    <string name="hint_address">Address</string>
+    <string name="save">Save</string>
+
+
+</resources>

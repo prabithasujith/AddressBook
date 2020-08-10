@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_flow"
+    app:startDestination="@id/contactsListFragment">
+
+    <fragment
+        android:id="@+id/contactsListFragment"
+        android:name="com.prabitha.nuomtask.contactListApp.contactsListFragment.ContactsListFragment"
+        android:label="ContactsListFragment" >
+
+        <action
+            android:id="@+id/action_contactsListFragment_to_contactDetailsFragment"
+            app:destination="@id/contactDetailsFragment"
+            />
+        <action
+            android:id="@+id/action_contactsListFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailsFragment"
+        android:name="com.prabitha.nuomtask.contactListApp.contactDetailsFragment.ContactDetailsFragment"
+        android:label="ContactDetailsFragment" >
+        <argument
+            android:name="contactId"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_contactDetailsFragment_to_contactsListFragment"
+            app:destination="@id/contactsListFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/contactsListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContactFragment"
+        android:name="com.prabitha.nuomtask.contactListApp.addContactFragment.AddContactFragment"
+        android:label="AddContactFragment" >
+        <action
+            android:id="@+id/action_addContactFragment_to_contactsListFragment"
+            app:destination="@id/contactsListFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/contactsListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

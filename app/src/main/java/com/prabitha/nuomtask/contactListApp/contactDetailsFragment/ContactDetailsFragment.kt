@@ -62,7 +62,7 @@ class ContactDetailsFragment : Fragment() {
 
 myContactDetailViewModel.contact.observe(
     this.viewLifecycleOwner, Observer {
-        (activity as AppCompatActivity).supportActionBar?.title =myContactDetailViewModel.contact.value?.firstName+ " " +myContactDetailViewModel.contact.value?.lastName
+        (activity as AppCompatActivity).supportActionBar?.title =it.firstName+ " " +it.lastName
 
     }
 )

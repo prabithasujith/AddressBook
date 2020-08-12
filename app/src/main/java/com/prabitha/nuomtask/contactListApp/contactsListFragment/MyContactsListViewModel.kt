@@ -11,7 +11,6 @@ class MyContactsListViewModel (
     database: MyContactsDAO,
     application: Application): AndroidViewModel(application) {
 
-    private var viewModelJob = Job()
     val contacts = database.getAllContacts()
 
     private val _navigateToContactDetail=MutableLiveData<Long>()
@@ -36,12 +35,5 @@ class MyContactsListViewModel (
     fun onNavigatedToContactDetail(){
         _navigateToContactDetail.value=null
     }
-    /*
-       * Cancel all the coroutines started by this view model
-       *
-       */
-    override fun onCleared() {
-        super.onCleared()
-        viewModelJob.cancel()
-    }
+
 }
